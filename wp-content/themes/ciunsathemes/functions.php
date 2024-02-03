@@ -68,13 +68,7 @@ function ciunsa_widgets() {
         'before_title'  => '<h4 class="text-primario">',
         'after_title'   => '</h4>',
     ));
-    register_sidebar(array (
-        'name'          => "Redes Sociales",
-        'id'            => 'redes_sociales',
-        'description'   => 'Agrega una widget de Redes Sociales',
-        'before_widget' => '<div class="redesSociales">',
-        'after_widget'  =>'</div>',   
-    ));
+  
 }
 add_action('widgets_init', 'ciunsa_widgets');
 
@@ -110,6 +104,44 @@ function registrar_novedades_destacadas() {
 }
 
 add_action( 'init', 'registrar_novedades_destacadas' );
+ 
+
+// Registra un tipo de contenido personalizado para ciunsa_revista
+function registrar_ciunsa_revista() {
+    $labels = array(
+        'name'               => 'Revistas Ciunsa',
+        'singular_name'      => 'Revista Ciunsa',
+        'add_new'            => 'Añadir Nueva Revista Ciunsa',
+        'add_new_item'       => 'Añadir Nueva Revista Ciunsa',
+        'edit_item'          => 'Editar Revista Ciunsa',
+        'new_item'           => 'Nueva Revista Ciunsa',
+        'all_items'          => 'Todas las Revistas Ciunsa',
+        'view_item'          => 'Ver Revista Ciunsa',
+        'search_items'       => 'Buscar Revistas Ciunsa',
+        'not_found'          => 'No se encontraron Revistas Ciunsa',
+        'not_found_in_trash' => 'No se encontraron Revistas Ciunsa en la papelera',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Revistas Ciunsa'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'ciunsa_revista' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' )
+    );
+
+    register_post_type( 'ciunsa_revista', $args );
+}
+add_action( 'init', 'registrar_ciunsa_revista' );
 
 
 
