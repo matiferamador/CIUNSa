@@ -33,6 +33,8 @@ function ciunsa_scripts_styles () {
 }
 add_action ('wp_enqueue_scripts', 'ciunsa_scripts_styles');
 
+// Codigo para agregar widgets
+
 function ciunsa_widgets() {
     register_sidebar (array (
         'name' => 'Sidebar 1',
@@ -87,7 +89,6 @@ function registrar_novedades_destacadas() {
         'not_found'          => 'No se encontraron Novedades Destacadas',
         'not_found_in_trash' => 'No se encontraron Novedades Destacadas en la papelera',
     );
-
     $args = array(
         'labels'              => $labels,
         'public'              => true,
@@ -101,10 +102,8 @@ function registrar_novedades_destacadas() {
         'taxonomies'          => array( 'category' ), // Agregar soporte para categorías
         'menu_icon'           => 'dashicons-megaphone', // Cambiar el icono a un megáfono
     );
-
     register_post_type( 'novedades_destacadas', $args );
 }
-
 add_action( 'init', 'registrar_novedades_destacadas' );
  
 // Registra un tipo de contenido personalizado para ciunsa_revista
@@ -124,7 +123,6 @@ function registrar_ciunsa_revista() {
         'parent_item_colon'  => '',
         'menu_name'          => 'Revistas Ciunsa'
     );
-
     $args = array(
         'labels'             => $labels,
         'public'             => true,
@@ -140,12 +138,11 @@ function registrar_ciunsa_revista() {
         'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments'),
         'menu_icon'          => 'dashicons-book-alt', // Cambiar a un icono de revista (Dashicons)
     );
-
     register_post_type( 'ciunsa_revista', $args );
 }
 add_action( 'init', 'registrar_ciunsa_revista' );
 
-// Mejorar el linkbox
+// SHORTCODES
 
 // Shortcode pdf
 function linkbox_shortcode($atts, $content = null) {
@@ -170,6 +167,7 @@ function linkbox_shortcode($atts, $content = null) {
     return $output;
 }
 add_shortcode('linkbox', 'linkbox_shortcode');
+
 // shortcode-word
 function linkbox_word_shortcode($atts, $content = null) {
     $atts = shortcode_atts(
@@ -180,7 +178,6 @@ function linkbox_word_shortcode($atts, $content = null) {
         $atts,
         'linkbox_word'
     );
-
     // Ruta del ícono
     $icon_url = get_template_directory_uri() . '/img/icon-word.svg';
 
@@ -189,7 +186,6 @@ function linkbox_word_shortcode($atts, $content = null) {
     $output .= '<img src="' . esc_url($icon_url) . '" alt="Icono Word" class="w-[40px] h-[40px]">';
     $output .= '<span>' . esc_html($content) . '</span>';
     $output .= '</a>';  
-
     return $output;
 }
 add_shortcode('linkbox_word', 'linkbox_word_shortcode');
