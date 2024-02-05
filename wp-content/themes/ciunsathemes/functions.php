@@ -98,6 +98,8 @@ function registrar_novedades_destacadas() {
         'menu_position'       => 5,
         'supports'            => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
         'rewrite'             => array( 'slug' => 'novedades_destacadas' ),
+        'taxonomies'          => array( 'category' ), // Agregar soporte para categorías
+        'menu_icon'           => 'dashicons-megaphone', // Cambiar el icono a un megáfono
     );
 
     register_post_type( 'novedades_destacadas', $args );
@@ -105,7 +107,6 @@ function registrar_novedades_destacadas() {
 
 add_action( 'init', 'registrar_novedades_destacadas' );
  
-
 // Registra un tipo de contenido personalizado para ciunsa_revista
 function registrar_ciunsa_revista() {
     $labels = array(
@@ -136,17 +137,17 @@ function registrar_ciunsa_revista() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' )
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+        'menu_icon'          => 'dashicons-book-alt', // Cambiar a un icono de revista (Dashicons)
     );
 
     register_post_type( 'ciunsa_revista', $args );
 }
 add_action( 'init', 'registrar_ciunsa_revista' );
 
+// Mejorar el linkbox
 
-
-// mejorar el linkbox
-// shortcode pdf
+// Shortcode pdf
 function linkbox_shortcode($atts, $content = null) {
     $atts = shortcode_atts(
         array(
@@ -168,9 +169,7 @@ function linkbox_shortcode($atts, $content = null) {
 
     return $output;
 }
-
 add_shortcode('linkbox', 'linkbox_shortcode');
-
 // shortcode-word
 function linkbox_word_shortcode($atts, $content = null) {
     $atts = shortcode_atts(
@@ -193,5 +192,4 @@ function linkbox_word_shortcode($atts, $content = null) {
 
     return $output;
 }
-
 add_shortcode('linkbox_word', 'linkbox_word_shortcode');
