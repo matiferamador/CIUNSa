@@ -189,3 +189,4 @@ function linkbox_word_shortcode($atts, $content = null) {
     return $output;
 }
 add_shortcode('linkbox_word', 'linkbox_word_shortcode');
+
