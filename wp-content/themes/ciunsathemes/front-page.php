@@ -45,7 +45,7 @@ get_header();
         </div>
     </section>
     <section class="nav-enlaces-imagenes-bg">
-        <h5 class="text-center">Consejo de Investigacion - Universidad Nacional de Salta</h5>
+        <h5 class="text-center"> Consejo de Investigación - Universidad Nacional de Salta</h5>
 
         <div class="nav-enlaces-imagenes">
             <?php
