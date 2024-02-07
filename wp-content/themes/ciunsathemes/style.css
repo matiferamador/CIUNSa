@@ -93,6 +93,7 @@ hr {
     width: min(95%, 100rem);
     margin: 0 auto;
 }
+
 /* botones  */
 .boton{
     background-color: var(--blanco);
@@ -722,3 +723,8 @@ select {
     }
 }
 
+/* navbar redes sociales  */
+.list-items-wrapper {
+    display: flex;
+    gap: 1.5rem;
+}
