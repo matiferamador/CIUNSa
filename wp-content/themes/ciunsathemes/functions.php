@@ -52,6 +52,24 @@ function ciunsa_widgets() {
         'before_title' => '<h3 class=" text-center text-primario">',
         'after_title' => '</h3>'
     ));
+    register_sidebar (array (
+        'name' => 'Sidebar 3',
+        'id' => 'sidebar_3',
+        'description'   => 'Widget para filtrar por Categorias las Novedades.',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="text-primario">',
+        'after_title' => '</h4>'
+    ));
+    register_sidebar (array (
+        'name' => 'Sidebar 4',
+        'id' => 'sidebar_4',
+        'description'   => 'Widget para colocar iconos de Redes Sociales',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="text-primario">',
+        'after_title' => '</h4>'
+    ));
     register_sidebar(array(
         'name'          => 'Barra Enlaces Recomendados',
         'id'            => 'mi_area_de_widgets',
@@ -61,16 +79,6 @@ function ciunsa_widgets() {
         'before_title'  => '<h3 class="widget-titulo">',
         'after_title'   => '</h3>',
     ));
-    register_sidebar(array(
-        'name'          => "Categorias",
-        'id'            => 'barraBusqueda',
-        'description'   => 'Agrega una barra para filtrar los post por categorias',
-        'before_widget' => '<div class="barra">',
-        'after_widget'  =>'</div>',
-        'before_title'  => '<h4 class="text-primario">',
-        'after_title'   => '</h4>',
-    ));
-  
 }
 add_action('widgets_init', 'ciunsa_widgets');
 

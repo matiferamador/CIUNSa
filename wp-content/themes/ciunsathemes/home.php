@@ -4,7 +4,7 @@ get_header();
     <main class= " seccion contenedor">
         <div>
         <?php
-            dynamic_sidebar('Categorias') ?>    
+            dynamic_sidebar('Sidebar 3') ?>    
 
         </div>
         
