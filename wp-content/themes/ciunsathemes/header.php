@@ -14,7 +14,7 @@
                             </a>
                             <div class="widget-redes-sociales">
                             <?php
-                            dynamic_sidebar('Redes Sociales') ?>
+                            dynamic_sidebar('Sidebar 4') ?>
 
                             </div>
                           
