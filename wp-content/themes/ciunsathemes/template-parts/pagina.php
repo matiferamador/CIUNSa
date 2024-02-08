@@ -28,8 +28,8 @@ while (have_posts()): the_post();
         the_post_thumbnail("full", array('class' => 'imagen-destacada'));
     }
     ?>
-    <p class="informacion-revista">
-        <?php the_field('fecha_publicacion') ?>
+   <p class="informacion-revista">
+        <?php echo wp_kses_post(get_field('fecha_publicacion')); ?>
     </p>
     <?php
     the_content();
