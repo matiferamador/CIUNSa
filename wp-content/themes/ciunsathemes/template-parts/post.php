@@ -8,9 +8,9 @@
                 <div class="meta-info">
                         <p class="meta">
                         <span>Por: </span>
-                        <a href="">
+                     
                             <?php echo get_the_author_meta('display_name'); ?>
-                        </a>
+                        
                         </p>
                         
                         <div class="categoria">  
@@ -22,9 +22,9 @@
                         </div>
                         <p class="meta">
                         <span>Fecha: </span>
-                        <a href="">
+                       
                             <?php the_time(get_option('date_format')); ?>
-                        </a>
+                        
                         </p>     
                </div>
                 <?php
