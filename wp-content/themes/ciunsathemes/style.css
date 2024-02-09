@@ -413,10 +413,13 @@ padding: 2rem;
 .card .contenido p {
     color: var(--blanco);
 }
+.card .contenido a {
+    color:var(--secundario);
+}
 .card .meta {
     font-size: 1.4rem; 
 }
-.card .meta a {
+.card .meta P {
     color: var(--secundario); 
 }
 /* sidebar */
