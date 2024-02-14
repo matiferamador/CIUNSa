@@ -1,7 +1,7 @@
 <?php 
 function ciunsa_lista_revista($cantidad = -1) {
     ?>
-    <ul class=" listado-grid">
+    <ul class= "listado-grid">
                 <?php
                     $args= array (
                         'post_type' => 'ciunsa_revista',
