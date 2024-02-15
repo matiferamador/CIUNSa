@@ -3,7 +3,7 @@ function ciunsaWordPress() {
       const opciones = {
         loop: true,
         autoplay: {
-          delay: 4000,
+          delay: 7000,
         },
         pagination: {
           el: ".swiper-pagination",
