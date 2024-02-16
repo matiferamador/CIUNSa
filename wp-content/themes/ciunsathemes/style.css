@@ -731,3 +731,33 @@ select {
     display: flex;
     gap: 1.5rem;
 }
+
+/* SECCION CALENDARIO */
+.seccion-calendario {
+    background-color: #0097E6;
+    padding: 3rem;
+    margin: 5rem 0 5rem 0 ;
+    border-radius: 1.5rem;
+    -webkit-box-shadow: 10px 10px 12px 6px rgba(204,204,204,0.74);
+-moz-box-shadow: 10px 10px 12px 6px rgba(204,204,204,0.74);
+box-shadow: 10px 10px 12px 6px rgba(204,204,204,0.74);
+}
+.seccion-calendario-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.bg-flecha {
+    width: 60px; /* Tamaño del círculo */
+    height: 60px; /* Tamaño del círculo */
+    background-color: #007bff; /* Color de fondo */
+    border-radius: 50%; /* Hacer el div redondo */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+.bg-flecha:hover {
+    background-color: #273C75;
+}

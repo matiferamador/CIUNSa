@@ -33,6 +33,33 @@ get_header();
                 </div>
             </section>
         </main>
+    <section>
+        <div class="contenedor ">
+            <div class="text-center seccion-calendario">
+                <h3 class="text-blanco">Calendario de Actividades</h3>
+                <div class=" seccion-calendario-flex">
+                <div class="bg-flecha" >
+                    <a href="<?php echo esc_url( get_permalink(get_page_by_title('Calendario de Actividades'))); ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M5 12l14 0" />
+                            <path d="M15 16l4 -4" />
+                            <path d="M15 8l4 4" />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                        <img src=" <?php echo get_template_directory_uri(); ?>/img/icons8-calendario-94.png" alt="imagen calendario">
+                </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
     <section class="seccion contenedor"> 
         <h3 class="text-secundario">Conocé Comunidad CIUNSa</h3>
 
