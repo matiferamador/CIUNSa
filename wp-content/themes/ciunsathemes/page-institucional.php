@@ -12,32 +12,60 @@ get_header();
         <div> 
             <h3 class="text-center text-primario">Autoridades</h3>
         </div>
-        <div class="autoridades">
-            <div>
-                <?php 
-                $presidente = get_field('presidentea');
-                $texto = $presidente['nombre'];
+                <div class="autoridades">
+                    <div>
+                        <?php 
+                        $presidente = get_field('presidentea');
+                        $nombre_presidente = $presidente['nombre'];
+                        $imagen_presidente = $presidente['imagen'];
+                        ?>
+                        <h4>Presidente/a</h4>
+                        <img class="img-autoridad" src="<?php echo esc_url( $imagen_presidente['url'] ); ?>" alt="<?php echo esc_attr( $nombre_presidente ); ?>">
+                        <p><?php echo wp_kses_post( $nombre_presidente ); ?></p>
+                    </div>
+                    <div>
+                        <?php 
+                        $vicepresidente = get_field('vicepresidentea');
+                        $nombre_vicepresidente = $vicepresidente['nombre'];
+                        $imagen_vicepresidente = $vicepresidente['imagen'];
+                        ?>
+                        <h4>Vicepresidente/a</h4>
+                        <img class="img-autoridad" src="<?php echo esc_url( $imagen_vicepresidente['url'] ); ?>" alt="<?php echo esc_attr( $nombre_vicepresidente ); ?>">
+                        <p><?php echo wp_kses_post( $nombre_vicepresidente ); ?></p>
+                    </div>
+                    <div>
+                        <?php 
+                        $secretario = get_field('secretarioa_tecnicoa');
+                        $nombre_secretario = $secretario['nombre'];
+                        $imagen_secretario = $secretario['imagen'];
+                        ?>
+                        <h4>Secretario/a Técnico/a</h4>
+                        <img class="img-autoridad" src="<?php echo esc_url( $imagen_secretario['url'] ); ?>" alt="<?php echo esc_attr( $nombre_secretario ); ?>">
+                        <p><?php echo wp_kses_post( $nombre_secretario ); ?></p>
+                    </div>
+                </div>
+
+    <div>
+        <h4 class="text-center text-secundario">Personal CIUNSa</h4>
+    </div>
+    <div class="personales-ciunsa">
+        <div class="personal">
+        <?php 
+                $mesadeentradas = get_field('mesa_de_entradas');
+                $nombre = $mesadeentradas['nombre'];
+                $imagen = $mesadeentradas['imagen'];
+                $cargo = $mesadeentradas['cargo'];
                 ?>
-                <h4>Presidente/a</h4>
-                <p><?php echo wp_kses_post( $texto ); ?></p>
-            </div>
-            <div>
-                <?php 
-                $vicepresidente = get_field('vicepresidentea');
-                $texto = $vicepresidente['nombre'];
-                ?>
-                <h4>Vicepresidente/a</h4>
-                <p><?php echo wp_kses_post( $texto ); ?></p>
-            </div>
-            <div>
-                <?php 
-                $secretario = get_field('secretarioa_tecnicoa');
-                $texto = $secretario['nombre'];
-                ?>
-                <h4>Secretario/a Técnico/a</h4>
-                <p><?php echo wp_kses_post( $texto ); ?></p>
-            </div>
+                <p><?php echo wp_kses_post($nombre); ?></p>
+                <img class="img-autoridad" src="<?php echo esc_url( $imagen['url'] ); ?>" alt="<?php echo esc_attr( $nombre ); ?>">
+
+                <p><?php echo wp_kses_post($cargo); ?></p>
+
+
+
         </div>
+    </div>
+
 
         <div> 
             <h3 class="text-center text-primario">Consejeros/as Profesores</h3>

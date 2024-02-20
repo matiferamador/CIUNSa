@@ -672,6 +672,11 @@ aside .menu-menu-sidebar-container {
     color: #273C75;
     font-weight: 700;
 }
+.img-autoridad {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; 
+}
 /* barra de buqueda por categoria post  */
 .barra form {
     display: flex;
