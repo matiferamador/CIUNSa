@@ -766,3 +766,10 @@ box-shadow: 10px 10px 12px 6px rgba(204,204,204,0.74);
 .bg-flecha:hover {
     background-color: #273C75;
 }
+
+
+/* Personal ciunsa */
+.personal h4 {
+    margin: 0;
+    color: var(--secundario);
+}

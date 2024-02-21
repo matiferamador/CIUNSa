@@ -46,24 +46,34 @@ get_header();
                 </div>
 
     <div>
-        <h4 class="text-center text-secundario">Personal CIUNSa</h4>
+        <h4 class="text-center text-primario">Personal CIUNSa</h4>
     </div>
     <div class="personales-ciunsa">
         <div class="personal">
-        <?php 
-                $mesadeentradas = get_field('mesa_de_entradas');
-                $nombre = $mesadeentradas['nombre'];
-                $imagen = $mesadeentradas['imagen'];
-                $cargo = $mesadeentradas['cargo'];
-                ?>
-                <p><?php echo wp_kses_post($nombre); ?></p>
-                <img class="img-autoridad" src="<?php echo esc_url( $imagen['url'] ); ?>" alt="<?php echo esc_attr( $nombre ); ?>">
-
-                <p><?php echo wp_kses_post($cargo); ?></p>
-
-
-
+            <?php echo wp_kses_post( get_field('mesa_de_entradas') ); ?>
         </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('maestranza') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('becas') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('departamento_contable') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('despacho') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('departamento_de_patrimonio') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('departamento_de_informatica') ); ?>
+        </div>
+        <div class='personal'>
+            <?php echo wp_kses_post( get_field('proyectos_y_programas') ); ?>
+        </div>
+
     </div>
 
 
