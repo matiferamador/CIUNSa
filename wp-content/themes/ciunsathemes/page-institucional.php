@@ -48,7 +48,7 @@ get_header();
     <div>
         <h4 class="text-center text-primario">Personal CIUNSa</h4>
     </div>
-    <div class="personales-ciunsa">
+    <div class=" autoridades">
         <div class="personal">
             <?php echo wp_kses_post( get_field('mesa_de_entradas') ); ?>
         </div>
