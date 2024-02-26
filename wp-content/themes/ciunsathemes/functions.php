@@ -85,9 +85,9 @@ add_action('widgets_init', 'ciunsa_widgets');
 // Registrar Custom Post Type 'novedades_destacadas'
 function registrar_novedades_destacadas() {
     $labels = array(
-        'name'               => 'Novedades Destacadas',
+        'name'               => 'Carrusel Información Importante',
         'singular_name'      => 'Novedad Destacada',
-        'menu_name'          => 'Novedades Destacadas',
+        'menu_name'          => 'Carrusel',
         'add_new'            => 'Agregar Nueva',
         'add_new_item'       => 'Agregar Nueva Novedad Destacada',
         'edit_item'          => 'Editar Novedad Destacada',
@@ -117,7 +117,7 @@ add_action( 'init', 'registrar_novedades_destacadas' );
 // Registra un tipo de contenido personalizado para ciunsa_revista
 function registrar_ciunsa_revista() {
     $labels = array(
-        'name'               => 'Revistas Ciunsa',
+        'name'               => 'Comunidad Ciunsa',
         'singular_name'      => 'Revista Ciunsa',
         'add_new'            => 'Añadir Nueva Revista Ciunsa',
         'add_new_item'       => 'Añadir Nueva Revista Ciunsa',
@@ -129,7 +129,7 @@ function registrar_ciunsa_revista() {
         'not_found'          => 'No se encontraron Revistas Ciunsa',
         'not_found_in_trash' => 'No se encontraron Revistas Ciunsa en la papelera',
         'parent_item_colon'  => '',
-        'menu_name'          => 'Revistas Ciunsa'
+        'menu_name'          => 'Comunidad Ciunsa'
     );
     $args = array(
         'labels'             => $labels,
